@@ -1,6 +1,6 @@
 import functools
 
-file = open("input.txt", "r")
+file = open("D:\AOC 24\Day 1\input.txt", "r")
 lines = file.readlines()
 
 sum = lambda x, y : x + y

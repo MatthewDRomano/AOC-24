@@ -1,4 +1,4 @@
-with open("input.txt", "r") as file:
+with open("D:\AOC 24\Day 2\input.txt", "r") as file:
     lines = file.readlines()
 
 def isSafe(list):
