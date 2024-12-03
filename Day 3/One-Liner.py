@@ -1,0 +1,3 @@
+from functools import reduce
+[print(f"Output: {reduce(lambda a, b : a + b, [reduce(lambda x, y : int(x)*int(y), (pair[1:-1].split(','))) for pair in [mulExpr for mulExpr in [element.split(')')[0] + ')' for element in subInput.split("mul")] if (False if ((mulExpr[0] != '(' or mulExpr.count('(') != 1) or (mulExpr[-1] != ')' or mulExpr.count(')') != 1) or (',' not in mulExpr or mulExpr.count(',') != 1)) else reduce(lambda x, y : x and y, map(lambda char : char in 'mul(),0123456789', mulExpr)))]])}") for subInput in [open("D:\\AOC 24\\Day 3\\input.txt", "r").read(), "".join([term.split("don't()")[0] for term in open("D:\\AOC 24\\Day 3\\input.txt", "r").read().split("do()")])]]
+#why not
