@@ -59,7 +59,7 @@ for p in range(len(positionsVisited)):
         continue
         
     matrix[positionsVisited[p][0][0]][positionsVisited[p][0][1]] = "#"
-    pos = positionsVisited[p-1] if p > 0 else STARTPOSITION
+    pos = positionsVisited[p-1] if p > 0 else STARTPOSITION  # Start from position before the tested obstacle
     rotationLocations = []
 
     while inMatrix(pos):
