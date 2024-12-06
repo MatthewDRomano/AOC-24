@@ -54,12 +54,12 @@ print(f"Part One: {len(positionsVisited)}")
 
 
 amtSpots = 0
-for position in positionsVisited:
-    if position == STARTPOSITION:
+for p in range(len(positionsVisited)):
+    if positionsVisited[p] == STARTPOSITION:
         continue
         
-    matrix[position[0][0]][position[0][1]] = "#"
-    pos = STARTPOSITION
+    matrix[positionsVisited[p][0][0]][positionsVisited[p][0][1]] = "#"
+    pos = positionsVisited[p-1] if p > 0 else STARTPOSITION
     rotationLocations = []
 
     while inMatrix(pos):
@@ -79,6 +79,6 @@ for position in positionsVisited:
         else:
             break
 
-    matrix[position[0][0]][position[0][1]] = "."
+    matrix[positionsVisited[p][0][0]][positionsVisited[p][0][1]] = "."
 
 print(f"Part Two: {amtSpots}")
