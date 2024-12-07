@@ -6,6 +6,7 @@ nums = [part[1].strip().split(" ") for part in parts]
 add = lambda x, y : x + y
 multiply = lambda x, y : x * y
 concatinate = lambda x, y : int(str(x) + str(y))
+#Implemented functions
 
 def solveEquation(numArr, base_N_OperationStr, operations): # applies base_N operation string to numArr // returns total
     answer = int(numArr[0])
