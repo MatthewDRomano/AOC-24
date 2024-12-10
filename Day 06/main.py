@@ -54,10 +54,7 @@ print(f"Part One: {len(positionsVisited)}")
 
 
 amtSpots = 0
-for p in range(len(positionsVisited)):
-    if positionsVisited[p] == STARTPOSITION:
-        continue
-        
+for p in range(1, len(positionsVisited)): # first position is the start position
     matrix[positionsVisited[p][0][0]][positionsVisited[p][0][1]] = "#"
     pos = positionsVisited[p-1] if p > 0 else STARTPOSITION  # Start from position before the tested obstacle
     rotationLocations = []

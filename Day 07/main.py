@@ -17,10 +17,10 @@ def solveEquation(numArr, base_N_OperationStr, operations): # applies base_N ope
         index += 1
     return answer
 
-def decimalToBaseN(decimalNum, base): #allows up to base 36
+def decimalToBaseN(decimalNum, base): #allows up to base 10
     if decimalNum == 0:
         return "0"
-    digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+    digits = "0123456789" 
     result = ""
 
     while decimalNum > 0:
@@ -49,6 +49,7 @@ def findCalibrationTotal(operations):
 
         while True:
             answer = solveEquation(nums[i], base_N_OperationRepresentation, operations)
+            
 
             if answer == testValues[i]:
                 totalCalibrationResults += testValues[i]
